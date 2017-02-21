@@ -7,9 +7,11 @@ console.log("Starting App.js");
 
 const fs = require('fs');
 const os = require('os');
+const _ = require('lodash');
 const notes = require('./notes.js');
 
-var res = notes.addNote();
+console.log(_.isString(true));
+console.log(_.isString('Andrico'));
 
 // var user = os.userInfo();
 //
@@ -20,7 +22,3 @@ var res = notes.addNote();
 //         console.log(`There was an error, ${user.username}`);
 //     }
 // });
-
-var addRest = notes.add(4, 6);
-
-console.log(addRest);
