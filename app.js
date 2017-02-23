@@ -17,7 +17,11 @@ var command = process.argv[2];
 
 if(command === 'add') {
 
-    notes.addNote(argv.title, argv.body);
+    var note = notes.addNote(argv.title, argv.body);
+    if (note) {
+
+        console.log(`Successfully added ${note.title}, with content: ${note.body}`);
+    }
 } else if(command === 'list') {
 
     notes.listNote();
