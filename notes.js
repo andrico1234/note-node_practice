@@ -1,8 +1,6 @@
 "use strict";
 const fs = require('fs');
 
-console.log('Starting notes.js');
-
 var fetchNotes = () => {
 
     if (fs.existsSync('notes-data.json')) {
@@ -44,7 +42,7 @@ var addNote = (title, body) => {
 
 var listNote = () => {
 
-    console.log('Getting all notes');
+    return fetchNotes();
 };
 
 var readNote = (title) => {
