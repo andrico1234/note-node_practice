@@ -27,7 +27,15 @@ if(command === 'add') {
     notes.listNote();
 } else if(command === 'read') {
 
-    notes.readNote(argv.title);
+    var note = notes.readNote(argv.title);
+
+    if (note) {
+
+        console.log(`Note: ${note}`);
+    } else {
+
+        console.log('Note not found');
+    }
 } else if(command === 'remove') {
 
     notes.removeNote(argv.title);

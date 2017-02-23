@@ -49,7 +49,14 @@ var listNote = () => {
 
 var readNote = (title) => {
 
-    console.log(`Reading ${title} from list`);
+    var notes = fetchNotes();
+    var noteToRead = notes.filter((note) => note.title === title);
+
+    if (noteToRead[0] !== undefined) {
+
+        return  noteToRead[0].body;
+    }
+    return false;
 };
 
 var removeNote = (title) => {
