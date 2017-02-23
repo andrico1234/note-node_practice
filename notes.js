@@ -55,6 +55,17 @@ var readNote = (title) => {
 var removeNote = (title) => {
 
     console.log(`Removing ${title} from list`);
+
+    var notes = fetchNotes();
+    var notesToSave = notes.filter((note) => note.title !== title);
+
+    if (notes.length == notesToSave.length) {
+
+        console.log('File doesn\'t exist');
+    } else {
+
+        saveNotes(notesToSave);
+    }
 };
 
 module.exports = {
