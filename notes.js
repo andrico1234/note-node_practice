@@ -52,7 +52,7 @@ var readNote = (title) => {
 
     if (noteToRead[0] !== undefined) {
 
-        return  noteToRead[0].body;
+        return noteToRead[0].body;
     }
     return false;
 };
@@ -75,5 +75,8 @@ var removeNote = (title) => {
 
 module.exports = {
 
-    addNote: addNote, listNote: listNote, readNote: readNote, removeNote: removeNote
+    addNote: addNote,
+    listNote: listNote,
+    readNote: readNote,
+    removeNote: removeNote
 };

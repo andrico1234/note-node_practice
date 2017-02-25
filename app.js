@@ -5,11 +5,12 @@
 
 const fs = require('fs');
 const _ = require('lodash');
-const yargs = require('yargs');
 
+const argument = require('./arguments.js');
 const notes = require('./notes.js');
 
-const argv = yargs.argv;
+
+const argv = argument.giveArgs();
 var command = process.argv[2];
 
 if (command === 'add') {
